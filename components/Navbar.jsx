@@ -141,7 +141,7 @@ function Navbar() {
               <Image src={Cart1} alt="" />
             </Link>
           </li>
-          <li tabIndex={0} onBlur={() => setIsShowProfile(false)}>
+          <li>
             <Image
               src={Vector}
               alt=""
@@ -149,7 +149,7 @@ function Navbar() {
               className="cursor-pointer"
             />
             {IsShowProfile && (
-              <div className="bg-white absolute md:right-10 top-60 md:top-20 p-4 rounded-md">
+              <div className="bg-white absolute md:right-10 top-60 md:top-20 p-4 rounded-md"  tabIndex={0} onBlur={() => setIsShowProfile(false)}>
                 {session ? (
                   <>
                     <p>
