@@ -143,6 +143,7 @@ function ProductDetail({ params }) {
                   height={93} // height in pixels
                   className="cursor-pointer max-h-[93px] w-[46px]"
                   onClick={() => setMainImage(image)}
+                  alt=""
                 />
               ))}
             </div>
@@ -152,6 +153,7 @@ function ProductDetail({ params }) {
                 width={413} 
                 height={516} // height in pixels
                 className="w-[413px] h-[516px] object-contain"
+                alt=""
               />
             </div>
           </div>
@@ -217,7 +219,7 @@ function ProductDetail({ params }) {
                       src={ScreenSize}
                       alt="Screen Size"
                       width={5} 
-                      height={5} // height in pixels
+                      height={5} 
                       className="w-5 h-5"
                     />
 
@@ -225,7 +227,7 @@ function ProductDetail({ params }) {
                       <p className="text-sm leading-4 font-normal text-[#a7a7a7]">
                         Screen size
                       </p>
-                      <span className="font-medium text-[#4e4e4e]">6.7"</span>
+                      <span className="font-medium text-[#4e4e4e]">6.7&quot;</span>
                     </div>
                   </div>
                   <div className="detail3 p-4 flex gap-2 bg-[#f4f4f4] rounded-[7px] items-center">
@@ -392,7 +394,7 @@ function ProductDetail({ params }) {
                 <h1 className="font-medium text-xl leading-6">Screen</h1>
                 <p className="flex justify-between border-b-[0.5px] font-normal leading-6">
                   <span className="text-base">Screen Diagonal</span>
-                  <span className="text-[15px]">6.7"</span>
+                  <span className="text-[15px]">6.7&quot;</span>
                 </p>
                 <p className="flex justify-between border-b-[0.5px] font-normal leading-6">
                   <span className="text-base">The screen resolution</span>
@@ -596,7 +598,7 @@ function ProductDetail({ params }) {
             )
               .slice(0, 4)
               .map((relevent) => (
-                <ProductCard item={relevent} />
+                <ProductCard item={relevent} key={relevent.id}/>
               ))}
           </div>
         </section>

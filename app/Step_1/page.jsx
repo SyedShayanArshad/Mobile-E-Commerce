@@ -6,7 +6,7 @@ import AddressForm from "@/components/AddressForm";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import DefaultLayout from "@/components/DefaultLayout";
-import Image from "next/image"; 
+import Image from "next/image";
 import LocationImg from "/public/images/Location.png";
 import ShippingImg from "/public/images/Shipping.png";
 import PaymentImg from "/public/images/Payment_1.png";
@@ -78,8 +78,9 @@ function Step_1() {
               Select Address
             </h1>
             <div className="AddressList flex flex-col gap-4">
-              {AddressList.map((address) => (
+              {AddressList.map((address, index) => (
                 <AddressItem
+                  key={index}
                   label={address.label}
                   type={address.type}
                   phoneNo={address.phoneNo}

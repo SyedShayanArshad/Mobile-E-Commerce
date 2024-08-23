@@ -28,7 +28,7 @@ function ShoppingCart() {
     dispatch(setEstimatedShipping());
     dispatch(setEstimatedTax());
     dispatch(setTotal());
-  }, [SubTotal]);
+  }, [SubTotal,dispatch]);
   const checkOutHandler = () => {
     if (Total) {
       router.push("/Step_1");

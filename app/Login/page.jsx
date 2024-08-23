@@ -1,8 +1,11 @@
 "use client";
 import { signIn, useSession } from "next-auth/react";
-import { redirect } from "next/dist/server/api-utils";
 import { useState } from "react";
-
+import Image from "next/image";
+import LogoVector from "@/public/images/logoVector.png"
+import Google from "@/public/images/google.png"
+import Github from "@/public/images/github.png"
+import Hero_1 from "@/public/images/hero_1.png"
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +17,7 @@ export default function Home() {
 
   const SubmitHandler = async (e) => {
     e.preventDefault();
-     await signIn("credentials", {
+    await signIn("credentials", {
       email,
       password,
       callbackUrl: "/Home",
@@ -25,7 +28,7 @@ export default function Home() {
     <div className="flex h-screen md:flex-row flex-col">
       {/* Login Container */}
       <div className="flex-1 flex flex-col items-center justify-center p-6 gap-4 bg-gray-100">
-        <img src="/images/logoVector.png" alt="Logo" className="mb-4" />
+        <Image src={LogoVector} alt="Logo" className="mb-4" />
         <h1 className="text-2xl font-bold mb-4">Welcome!</h1>
         <form className="flex flex-col gap-4" onSubmit={SubmitHandler}>
           <h2 className="text-xl font-semibold">Sign In Now</h2>
@@ -60,14 +63,14 @@ export default function Home() {
           <h2 className="text-xl font-semibold">Or Sign In Using</h2>
           {!session && (
             <div className="flex items-center justify-center">
-              <img
-                src="/images/google.png"
+              <Image
+                src={Google}
                 alt="Sign in with Google"
                 onClick={() => handleSignIn("google")}
                 className="w-9 h-9 cursor-pointer transition-transform transform hover:scale-105"
               />
-              <img
-                src="/images/github.png"
+              <Image
+                src={Github}
                 alt="Sign in with GitHub"
                 onClick={() => handleSignIn("github")}
                 className="w-14 h-14 cursor-pointer transition-transform transform hover:scale-105"
@@ -77,8 +80,8 @@ export default function Home() {
         </div>
       </div>
       <div className="flex-1 bg-[#211c24] px-10 flex items-center justify-center">
-        <img
-          src="/images/hero_1.png"
+        <Image
+          src={Hero_1}
           alt="Hero Image"
           className="w-full h-full object-cover"
         />

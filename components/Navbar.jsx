@@ -81,6 +81,7 @@ function Navbar() {
               ) : (
                 filteredProducts.map((item) => (
                   <SearchItem
+                    key={item.id}
                     title={item.title}
                     img={item.thumbnail}
                     price={item.price}
@@ -102,7 +103,11 @@ function Navbar() {
           <li>Blog</li>
         </ul>
         <ul className="flex gap-6 items-center">
-          <li className="relative" tabIndex={0} onBlur={()=>setShowFavourite(false)}>
+          <li
+            className="relative"
+            tabIndex={0}
+            onBlur={() => setShowFavourite(false)}
+          >
             <div className="cartAmount absolute left-5 bottom-5 text-sm font-normal bg-red-500 text-white rounded-full px-2">
               {favouriteAmount}
             </div>
@@ -117,8 +122,9 @@ function Navbar() {
                 <h1 className="text-center font-semibold">
                   Favourite Products
                 </h1>
-                {favouriteItems.map((item) => (
+                {favouriteItems.map((item, index) => (
                   <FavouriteItem
+                    key={index}
                     title={item.title}
                     img={item.img}
                     price={item.price}

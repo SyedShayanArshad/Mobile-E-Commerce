@@ -161,7 +161,7 @@ function Home() {
                   Apple AirPods <span className="font-medium">Max</span>
                 </h1>
                 <p className="font-sfpro leading-6 font-medium text-base md:text-sm">
-                  Computational audio. Listen, it's powerful
+                  Computational audio. Listen, it &apos; s powerful
                 </p>
               </div>
             </div>
@@ -223,6 +223,7 @@ function Home() {
                 width={48}
                 height={48}
                 className="m-auto"
+                alt="img"
               />
               <h6 className="font-medium text-base font-sfpro leading-6 mt-2 text-center">
                 {cat.heading}
@@ -251,6 +252,7 @@ function Home() {
             <Image
               src={Gadgets}
               className="h-[366px] mb-[-10px]"
+              alt=""
             />
             <h2 className="font-light leading-[48px] text-[33px]">
               Popular Products
@@ -379,7 +381,7 @@ function Home() {
       <div className="discount flex flex-col gap-4 py-14 md:py-20 px-4 md:px-40">
         <h1 className="font-medium text-2xl leading-8">Discounts up to -50%</h1>
         <div className="discountList grid md:grid-cols-4 gap-4 grid-cols-2">
-          {AllProducts.slice(0,4).map(product=><ProductCard item= {product}/>)}
+          {AllProducts.slice(0,4).map((product,index)=><ProductCard item= {product} key={index}/>)}
         </div>
       </div>
       <section className="Banner_3 h-[448px] bg-gradient-to-r from-[#2e2e2e] to-black relative overflow-hidden">
