@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "@/public/images/Logo.png"
 import Twitter from "@/public/images/Twitter.png"
 import Facebook from "@/public/images/facebook.png"
-import Instagram from "@/public/images/instagram.png"
+import Instagram from "@/public/images/Instagram.png"
 import Tiktok from "@/public/images/tiktok.png"
 import Image from "next/image";
 function Footer() {
