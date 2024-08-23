@@ -12,6 +12,11 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        sans: ['"SF Pro Display"', 'system-ui', 'sans-serif'], // Default sans-serif
+        sfpro: ['"SF Pro Display"', 'sans-serif'], // Custom SF Pro font class
+        figtree: ['Figtree', 'sans-serif'], 
+      },
     },
   },
   plugins: [],
