@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Pencil from "/public/images/Pencil.png";
-import Close from "/public/images/Close.png";
+import Pencil from "@/public/images/Pencil.png";
+import Close from "@/public/images/Close.png";
 import { removeAddress } from "@/lib/features/address/AddressSlice";
 import { setSelectedAddress } from "@/lib/features/payment/PaymentSlice";
 import { useDispatch, useSelector } from "react-redux";
