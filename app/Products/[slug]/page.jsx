@@ -39,7 +39,7 @@ function ProductDetail({ params }) {
 
   const memoryOptions = ["128GB", "256GB", "512GB", "1TB"];
   const colorOptions = ["#000000", "#781DBC", "#E10000", "#E1B000", "#E8E8E8"];
-  const secondaryImages = DetailItem.images.slice(0,3)
+  const secondaryImages = DetailItem.images.slice(0, 3);
   const reviews = [
     {
       name: "Ronald Richards",
@@ -98,7 +98,7 @@ function ProductDetail({ params }) {
           <Image
             src={Arrow}
             alt="Arrow"
-            width={6} 
+            width={6}
             height={12} // height in pixels (to maintain aspect ratio 6:3)
             className="w-[6px] h-3"
           />
@@ -107,7 +107,7 @@ function ProductDetail({ params }) {
           <Image
             src={Arrow}
             alt="Arrow"
-            width={6} 
+            width={6}
             height={12} // height in pixels (to maintain aspect ratio 6:3)
             className="w-[6px] h-3"
           />
@@ -116,7 +116,7 @@ function ProductDetail({ params }) {
           <Image
             src={Arrow}
             alt="Arrow"
-            width={6} 
+            width={6}
             height={12} // height in pixels (to maintain aspect ratio 6:3)
             className="w-[6px] h-3"
           />
@@ -125,7 +125,7 @@ function ProductDetail({ params }) {
           <Image
             src={Arrow}
             alt="Arrow"
-            width={6} 
+            width={6}
             height={12} // height in pixels (to maintain aspect ratio 6:3)
             className="w-[6px] h-3"
           />
@@ -139,18 +139,18 @@ function ProductDetail({ params }) {
                 <Image
                   key={index}
                   src={image}
-                  width={46} 
-                  height={93} // height in pixels
+                  width={46}
+                  height={93}
                   className="cursor-pointer max-h-[93px] w-[46px]"
                   onClick={() => setMainImage(image)}
                   alt=""
                 />
               ))}
             </div>
-            <div className="w-[413px]">
+            <div className="md:w-[413px]">
               <Image
                 src={mainImage}
-                width={413} 
+                width={413}
                 height={516} // height in pixels
                 className="w-[413px] h-[516px] object-contain"
                 alt=""
@@ -218,8 +218,8 @@ function ProductDetail({ params }) {
                     <Image
                       src={ScreenSize}
                       alt="Screen Size"
-                      width={5} 
-                      height={5} 
+                      width={5}
+                      height={5}
                       className="w-5 h-5"
                     />
 
@@ -227,14 +227,16 @@ function ProductDetail({ params }) {
                       <p className="text-sm leading-4 font-normal text-[#a7a7a7]">
                         Screen size
                       </p>
-                      <span className="font-medium text-[#4e4e4e]">6.7&quot;</span>
+                      <span className="font-medium text-[#4e4e4e]">
+                        6.7&quot;
+                      </span>
                     </div>
                   </div>
                   <div className="detail3 p-4 flex gap-2 bg-[#f4f4f4] rounded-[7px] items-center">
                     <Image
                       src={CPU}
                       alt="CPU"
-                      width={5} 
+                      width={5}
                       height={5} // height in pixels
                       className="w-5 h-5"
                     />
@@ -252,7 +254,7 @@ function ProductDetail({ params }) {
                     <Image
                       src={Cores}
                       alt="Cores"
-                      width={7} 
+                      width={7}
                       height={7} // height in pixels
                       className="w-7 h-7"
                     />
@@ -268,7 +270,7 @@ function ProductDetail({ params }) {
                     <Image
                       src={MainCamera}
                       alt="Main Camera"
-                      width={5} 
+                      width={5}
                       height={5} // height in pixels
                       className="w-5 h-5"
                     />
@@ -286,7 +288,7 @@ function ProductDetail({ params }) {
                     <Image
                       src={FrontCamera}
                       alt="Front Camera"
-                      width={5} 
+                      width={5}
                       height={5} // height in pixels
                       className="w-5 h-5"
                     />
@@ -302,7 +304,7 @@ function ProductDetail({ params }) {
                     <Image
                       src={Battery}
                       alt="Battery"
-                      width={5} 
+                      width={5}
                       height={5} // height in pixels
                       className="w-5 h-5"
                     />
@@ -554,7 +556,7 @@ function ProductDetail({ params }) {
                   <Image
                     src={review.userImg}
                     alt="Profile"
-                    width={56} 
+                    width={56}
                     height={56} // height in pixels
                     className="rounded-[10px] w-14 h-14"
                   />
@@ -571,8 +573,8 @@ function ProductDetail({ params }) {
                       <Image
                         src={review.ratingImg}
                         alt="Rating"
-                        width={116} 
-                        height={0} 
+                        width={116}
+                        height={0}
                         className="w-[116px]"
                       />
                     </div>
@@ -598,7 +600,7 @@ function ProductDetail({ params }) {
             )
               .slice(0, 4)
               .map((relevent) => (
-                <ProductCard item={relevent} key={relevent.id}/>
+                <ProductCard item={relevent} key={relevent.id} />
               ))}
           </div>
         </section>

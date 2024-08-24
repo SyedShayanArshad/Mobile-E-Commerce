@@ -11,7 +11,7 @@ function Footer() {
       <div className="flex flex-col md:flex-row justify-between gap-8">
         <div className="info-1">
           <Image src={Logo} alt="logo" className="m-auto md:m-0"/>
-          <p className="text-[#CFCFCF] font-sfpro font-medium leading-6 w-96 pt-6">
+          <p className="text-[#CFCFCF] font-sfpro font-medium leading-6 md:w-96 pt-6">
             We are a residential interior design firm located in Portland. Our
             boutique-studio offers more than
           </p>
