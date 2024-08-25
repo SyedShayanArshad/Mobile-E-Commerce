@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DefaultLayout from "@/components/DefaultLayout";
+import { addToFavourite } from "@/lib/features/Favourite/FavouriteSlice";
 import Image from "next/image";
 import ScreenSize from "@/public/images/ScreenSize.png";
 import CPU from "@/public/images/CPU.png";
@@ -73,6 +74,18 @@ function ProductDetail({ params }) {
   const toggleReviews = () => {
     setShowAllReviews(!showAllReviews);
   };
+  const LikeHandler = () => {
+    dispatch(addToFavourite({ title: DetailItem.title, img:DetailItem.thumbnail, price:DetailItem.price}))
+
+    toast.success("Item added to Favourite!", {
+      autoClose: 1000,
+      position: "top-center",
+      hideProgressBar: true,
+      style: {
+        borderRadius: "10px",
+      },
+    });
+  };  
   const AddCartHandler = () => {
     dispatch(
       addToCart({
@@ -346,7 +359,7 @@ function ProductDetail({ params }) {
               </div>
             </div>
             <div className="buttons flex gap-4 flex-col md:flex-row">
-              <button className="rounded-md py-4 px-14 border border-black">
+              <button className="rounded-md py-4 px-14 border border-black" onClick={LikeHandler}>
                 Add to WishList
               </button>
               <button
