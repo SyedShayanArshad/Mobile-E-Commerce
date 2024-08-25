@@ -157,7 +157,7 @@ function ProductDetail({ params }) {
               />
             </div>
           </div>
-          <div className="info flex flex-col gap-8 px-4 md:px-0">
+          <div className="info flex flex-col gap-8">
             <div className="content flex gap-4 flex-col">
               <div className="title flex flex-col gap-6">
                 <h1 className="font-bold text-[40px] leading-10">
@@ -198,11 +198,11 @@ function ProductDetail({ params }) {
                     ))}
                   </div>
                 </div>
-                <div className="tabMemory flex gap-2 md:gap-4">
+                <div className="tabMemory grid grid-cols-4 gap-2 md:gap-4">
                   {memoryOptions.map((memory) => (
                     <div
                       key={memory}
-                      className={`py-4 px-6 rounded-lg border-2 ${
+                      className={`text-center py-4 px-3 md:px-6 rounded-lg border-2 ${
                         selectedMemory === memory
                           ? "border-black text-black"
                           : "border-[#d5d5d5] text-[#6f6f6f]"

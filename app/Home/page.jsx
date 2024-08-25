@@ -120,7 +120,7 @@ function Home() {
             Created to change everything for the better. For everyone
           </p>
           <Link href={"/Products"}>
-            <button className="rounded-md border py-4 px-14 text-[#ffffff] w-[184px] h-14 font-sfpro text-[16px] m-auto md:m-0">
+            <button className="rounded-md border py-4 md:px-14 text-[#ffffff] w-[184px] h-14 font-sfpro text-[16px] m-auto md:m-0">
               Shop Now
             </button>
           </Link>
