@@ -151,13 +151,13 @@ function ProductDetail({ params }) {
               <Image
                 src={mainImage}
                 width={413}
-                height={516} // height in pixels
+                height={516}
                 className="w-[413px] h-[516px] object-contain"
                 alt=""
               />
             </div>
           </div>
-          <div className="info flex flex-col gap-8">
+          <div className="info flex flex-col gap-8 px-4 md:px-0">
             <div className="content flex gap-4 flex-col">
               <div className="title flex flex-col gap-6">
                 <h1 className="font-bold text-[40px] leading-10">
