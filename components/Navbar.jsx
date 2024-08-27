@@ -72,7 +72,7 @@ function Navbar() {
             value={Search}
             onBlur={() => setSearch("")}
             onChange={searchHandler}
-            className="rounded-lg p-4 bg-[#F5F5F5] pl-10 min-w-[325px] md:min-w-[362px]"
+            className="rounded-lg p-4 bg-[#F5F5F5] pl-10 max-w-[325px] md:min-w-[362px]"
           />
           {Search && (
             <div className="searchItems absolute p-4 max-h-[300px] overflow-y-auto bg-white">
